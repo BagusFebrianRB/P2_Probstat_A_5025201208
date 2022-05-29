@@ -30,12 +30,12 @@ t.test(x=data$oksigen.sesudah, y=data$oksigen.sebelum,
 
 #2
 stddev = 3900
-xbar = 23500
-mu = 20000
+mean = 23500
+mh0 = 20000
 n = 100
-stastistik =( (xbar - mu) / (stddev / sqrt(n)))
-pvalue = pnorm(-abs(stastistik))
-pvalue
+tsum.test(mean.x = mean, s.x = stddev ,n.x = n, mu = mh0, alternative = "greater", var.equal =  TRUE)
+2*pnorm(-abs((mean - mh0)/(stddev/sqrt(n)))
+
 
 #3
 significantlevel = 0.05
